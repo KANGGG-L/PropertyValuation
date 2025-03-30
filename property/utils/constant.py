@@ -1,0 +1,2 @@
+RENTAL_MODE = 0
+SOLD_MODE = 1
