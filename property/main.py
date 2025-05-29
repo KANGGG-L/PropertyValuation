@@ -24,10 +24,10 @@ valuator = PropertyValuator(db_manager)
 
 # Income approach
 income_value = valuator.income_based_valuation(
-    state="NSW",
-    postcode=2000,
-    address="100 George St",
-    area_name="Sydney",
+    state="VIC",
+    postcode=3000,
+    address="43 Spencer St",
+    area_name="Melbourne",
     property_type=1,  # apartment
     bedroom_num=2,
     bathroom_num=1,
@@ -36,10 +36,10 @@ income_value = valuator.income_based_valuation(
 
 # Sales comparison approach
 comparison_value = valuator.comparison_based_valuation(
-    state="NSW",
-    postcode=2000,
-    address="100 George St",
-    area_name="Sydney",
+    state="VIC",
+    postcode=3000,
+    address="43 Spencer St",
+    area_name="Melbourne",
     property_type=1,  # apartment
     bedroom_num=2,
     bathroom_num=1,
@@ -49,7 +49,7 @@ comparison_value = valuator.comparison_based_valuation(
 # Train and use regression model
 train_mae, test_mae = valuator.train_regression_model()
 regression_value = valuator.predict_with_regression_model(
-    postcode=2000,
+    postcode=3000,
     bedrooms=2,
     bathrooms=1,
     parking=1,
